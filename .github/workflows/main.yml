@@ -16,11 +16,11 @@ jobs:
         uses: actions/checkout@v4
 
       # Paso 2: Configurar JDK
-        - name: Set up JDK 17
-          uses: actions/setup-java@v4
-          with:
-            distribution: 'temurin'
-            java-version: '17'
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
 
       # Paso 3: Cache de dependencias de Maven
       - name: Cache Maven dependencies
@@ -53,19 +53,19 @@ jobs:
         uses: actions/checkout@v4
 
       # Paso 2: Configurar JDK
-        - name: Set up JDK 17
-          uses: actions/setup-java@v4
-          with:
-            distribution: 'temurin'
-            java-version: '17'
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
 
       # Paso 3: Construir el artefacto JAR
       - name: Package application
         run: mvn clean package -DskipTests
 
       # Paso 4: Subir artefacto JAR
-        - name: Upload JAR artifact
-          uses: actions/upload-artifact@v4
-          with:
-            name: app-jar
-            path: target/*.jar
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-jar
+          path: target/*.jar
