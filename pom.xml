@@ -12,7 +12,7 @@
 	<artifactId>bdget</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>bdget</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo project for Spring Boot - CI/CD with JaCoCo</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
