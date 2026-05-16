@@ -72,8 +72,8 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         run: |
           mkdir -p target
-          snyk test --all-projects --json-file-output=target/snyk-report.json || true
-          snyk test --all-projects --sarif-file-output=target/snyk-report.sarif || true
+          snyk test --json > target/snyk-report.json || true
+          snyk test --sarif > target/snyk-report.sarif || true
 
       - name: Upload Snyk Report
         uses: actions/upload-artifact@v4
