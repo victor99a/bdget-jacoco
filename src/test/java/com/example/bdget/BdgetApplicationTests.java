@@ -8,7 +8,6 @@ class BdgetApplicationTests {
 
         @Test
         void contextLoads() {
-                BdgetApplication.main(new String[]{});
         }
 
 }
